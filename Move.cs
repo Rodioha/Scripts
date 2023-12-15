@@ -113,24 +113,24 @@ public class PlayerController : MonoBehaviourPunCallbacks
         }
         if (Input.GetKeyDown(KeyCode.Alpha1) && isPistol)
         {
-            //ChooseWeapon(Weapons.Pistol);
-            photonView.RPC("ChooseWeapon", RpcTarget.All, Weapons.Pistol);
+            ChooseWeapon(Weapons.Pistol);
+            //photonView.RPC("ChooseWeapon", RpcTarget.All, Weapons.Pistol);
         }
         if (Input.GetKeyDown(KeyCode.Alpha2) && isRifle)
         {
-            //ChooseWeapon(Weapons.Rifle);
-            photonView.RPC("ChooseWeapon", RpcTarget.All, Weapons.Rifle);
+            ChooseWeapon(Weapons.Rifle);
+            //photonView.RPC("ChooseWeapon", RpcTarget.All, Weapons.Rifle);
         }
         //Здесь допиши логику для минигана и для отсутствия оружия
         if (Input.GetKeyDown(KeyCode.Alpha3) && isMiniGun)
         {
-            //ChooseWeapon(Weapons.MiniGun);
-            photonView.RPC("ChooseWeapon", RpcTarget.All, Weapons.MiniGun);
+            ChooseWeapon(Weapons.MiniGun);
+            //photonView.RPC("ChooseWeapon", RpcTarget.All, Weapons.MiniGun);
         }
         if (Input.GetKeyDown(KeyCode.Alpha0))
         {
-            //ChooseWeapon(Weapons.None);
-            photonView.RPC("ChooseWeapon", RpcTarget.All, Weapons.None);
+            ChooseWeapon(Weapons.None);
+            //photonView.RPC("ChooseWeapon", RpcTarget.All, Weapons.None);
         }
     }
     void FixedUpdate()
